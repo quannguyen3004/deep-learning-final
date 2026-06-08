@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pyc
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files
+*.csv
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dataset + images
+images/
+tabular/
+
+# Dataset folders to ignore
+test/
+train/
+val/
+
