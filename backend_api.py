@@ -18,6 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import torchvision.models as models
 from torchvision import transforms
+import torchvision.datasets as datasets
 from torch import nn
 from sklearn.linear_model import LogisticRegression
 import pickle
@@ -26,13 +27,12 @@ from datetime import datetime
 # ==================== CONFIG ====================
 MODELS_DIR = Path(__file__).parent
 RESNET_CHECKPOINT = MODELS_DIR / "best_model_resnet50_finetune.pth"
-VIT_CHECKPOINT = MODELS_DIR / "best_model_vit.pth"
+VIT_CHECKPOINT = MODELS_DIR / "best_vit_model.pth"
 STACKING_META_LEARNER = MODELS_DIR / "stacking_meta_learner.pkl"
 
-CLASS_NAMES = [
-    "Amphibia", "Animalia", "Arachnida", "Aves", "Fungi",
-    "Insecta", "Mammalia", "Mollusca", "Plantae", "Reptilia"
-]
+
+raw_train_dataset = datasets.ImageFolder(str(MODELS_DIR / "train"))
+CLASS_NAMES = raw_train_dataset.classes
 NUM_CLASSES = len(CLASS_NAMES)
 IMG_SIZE = 224
 
@@ -101,14 +101,14 @@ def load_vit():
         if checkpoint_num_classes != NUM_CLASSES:
             print(f"   Creating ViT with {checkpoint_num_classes} classes from checkpoint...")
             vit_model = timm.create_model(
-                'vit_base_patch16_224',
+                'vit_tiny_patch16_224',  # Đã sửa đổi từ vit_base thành vit_tiny
                 pretrained=False,
                 num_classes=checkpoint_num_classes,
                 in_chans=3
             )
             vit_model.load_state_dict(vit_checkpoint, strict=True)
             
-            # Expand to 10 classes
+            # Expand to matches NUM_CLASSES
             print(f"   Expanding model to {NUM_CLASSES} classes...")
             old_head = vit_model.head
             vit_model.head = nn.Linear(old_head.in_features, NUM_CLASSES)
@@ -120,7 +120,7 @@ def load_vit():
                 vit_model.head.bias[checkpoint_num_classes:].zero_()
         else:
             vit_model = timm.create_model(
-                'vit_base_patch16_224',
+                'vit_tiny_patch16_224',  # Đã sửa đổi từ vit_base thành vit_tiny
                 pretrained=False,
                 num_classes=NUM_CLASSES,
                 in_chans=3
@@ -129,7 +129,7 @@ def load_vit():
     else:
         print("   Using pretrained ImageNet weights")
         vit_model = timm.create_model(
-            'vit_base_patch16_224',
+            'vit_tiny_patch16_224',  # Đã sửa đổi từ vit_base thành vit_tiny
             pretrained=True,
             num_classes=NUM_CLASSES,
             in_chans=3
