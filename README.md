@@ -2,6 +2,15 @@
 
 Ứng dụng Deep Learning để phân loại động vật và thực vật sử dụng Ensemble Learning (ResNet50 + Vision Transformer).
 
+## Dataset:
+Tham khảo Dataset từ 3 bộ sau:
+1. [https://www.kaggle.com/datasets/advaitkisar/flora-and-fauna-dataset](https://www.kaggle.com/datasets/piyushkumar18/animal-image-classification-dataset)
+2. [https://www.kaggle.com/datasets/antobenedetti/animals](https://www.kaggle.com/datasets/antobenedetti/animals)
+3. [https://www.kaggle.com/datasets/marquis03/plants-classification](https://www.kaggle.com/datasets/marquis03/plants-classification)
+
+Sau khi phân chia thành 3 bộ data Train:Test:Val theo tỉ lệ 7:2:1, ta có bộ Data chính thức.
+Dataset cho bài: https://drive.google.com/drive/folders/1QuYMm7j6qsA5E1e6I6aPINCxJkZvP-av?usp=drive_link
+
 ## 📋 Mục Lục
 
 1. [Tính Năng](#tính-năng)
