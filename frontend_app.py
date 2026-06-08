@@ -186,19 +186,18 @@ with st.sidebar:
     
     # Information
     st.subheader("ℹ️ Thông Tin")
-    st.markdown("""
-    **Danh sách lớp:**
-    1. 🐸 Amphibia (Lưỡng cư)
-    2. 🦣 Animalia (Động vật)
-    3. 🕷️ Arachnida (Nhện, Bọ cạp)
-    4. 🦅 Aves (Chim)
-    5. 🍄 Fungi (Nấm)
-    6. 🐛 Insecta (Côn trùng)
-    7. 🐘 Mammalia (Động vật có vú)
-    8. 🐚 Mollusca (Động vật thân mềm)
-    9. 🌿 Plantae (Thực vật)
-    10. 🐢 Reptilia (Bò sát)
-    """)
+    if api_health and "classes" in api_health:
+        num_cls = api_health.get("num_classes", len(api_health["classes"]))
+        # Đưa toàn bộ 45 lớp vào khối Expander thu gọn để giữ thiết kế sạch sẽ
+        with st.expander(f"📋 Danh sách {num_cls} lớp mục tiêu"):
+            classes_list = api_health["classes"]
+            # Tạo các đầu điểm Bullet point động cho 45 lớp
+            st.markdown("\n".join([f"- **{cls}**" for cls in classes_list]))
+    else:
+        st.markdown("""
+        **Danh sách lớp:**
+        *(Chờ kết nối API để tải danh sách 45 lớp...)*
+        """)
     
     st.divider()
     
