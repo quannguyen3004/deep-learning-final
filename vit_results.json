@@ -1,0 +1,385 @@
+{
+    "model": "Vision Transformer (ViT-Base)",
+    "timestamp": "2026-06-08T20:31:10.085591",
+    "hyperparameters": {
+        "img_size": 224,
+        "patch_size": 16,
+        "batch_size": 32,
+        "num_epochs": 10,
+        "learning_rate": 5e-05,
+        "weight_decay": 0.01
+    },
+    "metrics": {
+        "test_accuracy": 0.7523503216229589,
+        "test_loss": 0.831807952351486,
+        "best_val_accuracy": 0.7603224214508966,
+        "macro_precision": 0.7139676904853136,
+        "macro_recall": 0.7099897046216378,
+        "macro_f1_score": 0.7064214093772169,
+        "correct_predictions": 9123,
+        "incorrect_predictions": 3003,
+        "avg_confidence": 0.7306157946586609
+    },
+    "per_class_metrics": [
+        {
+            "Class": "aloevera",
+            "Accuracy": 0.745,
+            "Precision": 0.8975903614457831,
+            "Recall": 0.745,
+            "F1-Score": 0.8142076502732241,
+            "Support": 200
+        },
+        {
+            "Class": "banana",
+            "Accuracy": 0.68,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.68,
+            "F1-Score": 0.6732673267326733,
+            "Support": 200
+        },
+        {
+            "Class": "bilimbi",
+            "Accuracy": 0.235,
+            "Precision": 0.5875,
+            "Recall": 0.235,
+            "F1-Score": 0.3357142857142857,
+            "Support": 200
+        },
+        {
+            "Class": "butterfly",
+            "Accuracy": 0.8172413793103448,
+            "Precision": 0.797979797979798,
+            "Recall": 0.8172413793103448,
+            "F1-Score": 0.807495741056218,
+            "Support": 290
+        },
+        {
+            "Class": "cantaloupe",
+            "Accuracy": 0.25,
+            "Precision": 0.373134328358209,
+            "Recall": 0.25,
+            "F1-Score": 0.2994011976047904,
+            "Support": 200
+        },
+        {
+            "Class": "cassava",
+            "Accuracy": 0.685,
+            "Precision": 0.479020979020979,
+            "Recall": 0.685,
+            "F1-Score": 0.5637860082304527,
+            "Support": 200
+        },
+        {
+            "Class": "cat",
+            "Accuracy": 0.9506398537477148,
+            "Precision": 0.9027777777777778,
+            "Recall": 0.9506398537477148,
+            "F1-Score": 0.9260908281389136,
+            "Support": 547
+        },
+        {
+            "Class": "cats",
+            "Accuracy": 0.6804123711340206,
+            "Precision": 0.7983870967741935,
+            "Recall": 0.6804123711340206,
+            "F1-Score": 0.7346938775510204,
+            "Support": 291
+        },
+        {
+            "Class": "coconut",
+            "Accuracy": 0.4,
+            "Precision": 0.5194805194805194,
+            "Recall": 0.4,
+            "F1-Score": 0.4519774011299435,
+            "Support": 200
+        },
+        {
+            "Class": "corn",
+            "Accuracy": 0.725,
+            "Precision": 0.8192090395480226,
+            "Recall": 0.725,
+            "F1-Score": 0.7692307692307693,
+            "Support": 200
+        },
+        {
+            "Class": "cow",
+            "Accuracy": 0.7620689655172413,
+            "Precision": 0.7949640287769785,
+            "Recall": 0.7620689655172413,
+            "F1-Score": 0.778169014084507,
+            "Support": 290
+        },
+        {
+            "Class": "cucumber",
+            "Accuracy": 0.85,
+            "Precision": 0.8900523560209425,
+            "Recall": 0.85,
+            "F1-Score": 0.8695652173913043,
+            "Support": 200
+        },
+        {
+            "Class": "curcuma",
+            "Accuracy": 0.545,
+            "Precision": 0.5422885572139303,
+            "Recall": 0.545,
+            "F1-Score": 0.543640897755611,
+            "Support": 200
+        },
+        {
+            "Class": "dog",
+            "Accuracy": 0.9238095238095239,
+            "Precision": 0.8981481481481481,
+            "Recall": 0.9238095238095239,
+            "F1-Score": 0.9107981220657277,
+            "Support": 525
+        },
+        {
+            "Class": "dogs",
+            "Accuracy": 0.718213058419244,
+            "Precision": 0.6852459016393443,
+            "Recall": 0.718213058419244,
+            "F1-Score": 0.7013422818791947,
+            "Support": 291
+        },
+        {
+            "Class": "eggplant",
+            "Accuracy": 0.72,
+            "Precision": 0.602510460251046,
+            "Recall": 0.72,
+            "F1-Score": 0.6560364464692483,
+            "Support": 200
+        },
+        {
+            "Class": "elephant",
+            "Accuracy": 0.9007177033492823,
+            "Precision": 0.9149453219927096,
+            "Recall": 0.9007177033492823,
+            "F1-Score": 0.9077757685352622,
+            "Support": 836
+        },
+        {
+            "Class": "galangal",
+            "Accuracy": 0.585,
+            "Precision": 0.5792079207920792,
+            "Recall": 0.585,
+            "F1-Score": 0.582089552238806,
+            "Support": 200
+        },
+        {
+            "Class": "ginger",
+            "Accuracy": 0.46,
+            "Precision": 0.3817427385892116,
+            "Recall": 0.46,
+            "F1-Score": 0.41723356009070295,
+            "Support": 200
+        },
+        {
+            "Class": "guava",
+            "Accuracy": 0.78,
+            "Precision": 0.6812227074235808,
+            "Recall": 0.78,
+            "F1-Score": 0.7272727272727273,
+            "Support": 200
+        },
+        {
+            "Class": "hen",
+            "Accuracy": 0.9206896551724137,
+            "Precision": 0.8959731543624161,
+            "Recall": 0.9206896551724137,
+            "F1-Score": 0.9081632653061225,
+            "Support": 290
+        },
+        {
+            "Class": "horse",
+            "Accuracy": 0.8640192539109507,
+            "Precision": 0.8661037394451147,
+            "Recall": 0.8640192539109507,
+            "F1-Score": 0.8650602409638555,
+            "Support": 831
+        },
+        {
+            "Class": "kale",
+            "Accuracy": 0.72,
+            "Precision": 0.8,
+            "Recall": 0.72,
+            "F1-Score": 0.7578947368421053,
+            "Support": 200
+        },
+        {
+            "Class": "lion",
+            "Accuracy": 0.8411214953271028,
+            "Precision": 0.8458646616541353,
+            "Recall": 0.8411214953271028,
+            "F1-Score": 0.8434864104967198,
+            "Support": 535
+        },
+        {
+            "Class": "longbeans",
+            "Accuracy": 0.87,
+            "Precision": 0.7945205479452054,
+            "Recall": 0.87,
+            "F1-Score": 0.8305489260143198,
+            "Support": 200
+        },
+        {
+            "Class": "mango",
+            "Accuracy": 0.25,
+            "Precision": 0.4,
+            "Recall": 0.25,
+            "F1-Score": 0.3076923076923077,
+            "Support": 200
+        },
+        {
+            "Class": "melon",
+            "Accuracy": 0.515,
+            "Precision": 0.42213114754098363,
+            "Recall": 0.515,
+            "F1-Score": 0.46396396396396394,
+            "Support": 200
+        },
+        {
+            "Class": "monkey",
+            "Accuracy": 0.8862068965517241,
+            "Precision": 0.921146953405018,
+            "Recall": 0.8862068965517241,
+            "F1-Score": 0.9033391915641477,
+            "Support": 290
+        },
+        {
+            "Class": "orange",
+            "Accuracy": 0.6,
+            "Precision": 0.5357142857142857,
+            "Recall": 0.6,
+            "F1-Score": 0.5660377358490566,
+            "Support": 200
+        },
+        {
+            "Class": "paddy",
+            "Accuracy": 0.755,
+            "Precision": 0.8031914893617021,
+            "Recall": 0.755,
+            "F1-Score": 0.7783505154639175,
+            "Support": 200
+        },
+        {
+            "Class": "panda",
+            "Accuracy": 0.9125,
+            "Precision": 0.9439655172413793,
+            "Recall": 0.9125,
+            "F1-Score": 0.9279661016949152,
+            "Support": 240
+        },
+        {
+            "Class": "papaya",
+            "Accuracy": 0.83,
+            "Precision": 0.7377777777777778,
+            "Recall": 0.83,
+            "F1-Score": 0.7811764705882352,
+            "Support": 200
+        },
+        {
+            "Class": "peperchili",
+            "Accuracy": 0.77,
+            "Precision": 0.6936936936936937,
+            "Recall": 0.77,
+            "F1-Score": 0.7298578199052133,
+            "Support": 200
+        },
+        {
+            "Class": "pineapple",
+            "Accuracy": 0.675,
+            "Precision": 0.703125,
+            "Recall": 0.675,
+            "F1-Score": 0.6887755102040817,
+            "Support": 200
+        },
+        {
+            "Class": "pomelo",
+            "Accuracy": 0.55,
+            "Precision": 0.41825095057034223,
+            "Recall": 0.55,
+            "F1-Score": 0.47516198704103674,
+            "Support": 200
+        },
+        {
+            "Class": "shallot",
+            "Accuracy": 0.91,
+            "Precision": 0.6148648648648649,
+            "Recall": 0.91,
+            "F1-Score": 0.7338709677419355,
+            "Support": 200
+        },
+        {
+            "Class": "sheep",
+            "Accuracy": 0.8379310344827586,
+            "Precision": 0.8617021276595744,
+            "Recall": 0.8379310344827586,
+            "F1-Score": 0.8496503496503497,
+            "Support": 290
+        },
+        {
+            "Class": "soybeans",
+            "Accuracy": 0.745,
+            "Precision": 0.7487437185929648,
+            "Recall": 0.745,
+            "F1-Score": 0.7468671679197995,
+            "Support": 200
+        },
+        {
+            "Class": "spider",
+            "Accuracy": 0.8724137931034482,
+            "Precision": 0.8754325259515571,
+            "Recall": 0.8724137931034482,
+            "F1-Score": 0.8739205526770294,
+            "Support": 290
+        },
+        {
+            "Class": "spinach",
+            "Accuracy": 0.67,
+            "Precision": 0.73224043715847,
+            "Recall": 0.67,
+            "F1-Score": 0.6997389033942559,
+            "Support": 200
+        },
+        {
+            "Class": "squirrel",
+            "Accuracy": 0.896551724137931,
+            "Precision": 0.7807807807807807,
+            "Recall": 0.896551724137931,
+            "F1-Score": 0.8346709470304976,
+            "Support": 290
+        },
+        {
+            "Class": "sweetpotatoes",
+            "Accuracy": 0.78,
+            "Precision": 0.7761194029850746,
+            "Recall": 0.78,
+            "F1-Score": 0.7780548628428927,
+            "Support": 200
+        },
+        {
+            "Class": "tobacco",
+            "Accuracy": 0.43,
+            "Precision": 0.6825396825396826,
+            "Recall": 0.43,
+            "F1-Score": 0.5276073619631901,
+            "Support": 200
+        },
+        {
+            "Class": "waterapple",
+            "Accuracy": 0.715,
+            "Precision": 0.6842105263157895,
+            "Recall": 0.715,
+            "F1-Score": 0.6992665036674817,
+            "Support": 200
+        },
+        {
+            "Class": "watermelon",
+            "Accuracy": 0.72,
+            "Precision": 0.7783783783783784,
+            "Recall": 0.72,
+            "F1-Score": 0.7480519480519481,
+            "Support": 200
+        }
+    ]
+}
